@@ -40,6 +40,7 @@ import org.eclipse.cdt.dsf.mi.service.IMIContainerDMContext;
 import org.eclipse.cdt.dsf.mi.service.MIBreakpointsManager;
 import org.eclipse.cdt.dsf.mi.service.MIProcesses;
 import org.eclipse.cdt.dsf.mi.service.command.CommandFactory;
+import org.eclipse.cdt.dsf.mi.service.command.commands.MITargetSelect;
 import org.eclipse.cdt.dsf.mi.service.command.output.MIInfo;
 import org.eclipse.cdt.dsf.service.DsfServicesTracker;
 import org.eclipse.cdt.utils.CommandLineUtil;
@@ -190,10 +191,19 @@ public class DebugNewProcessSequence extends ReflectionSequence {
 		if (!noFileCommand && fBinaryName != null && fBinaryName.length() > 0) {
 			fCommandControl.queueCommand(
 					fCommandFactory.createMIFileExecAndSymbols(getContainerContext(), fBinaryName), 
-					new ImmediateDataRequestMonitor<MIInfo>(rm));
+					new ImmediateDataRequestMonitor<MIInfo>(rm)
+					);
+			
+			fCommandControl.queueCommand(
+					new MITargetSelect(getContainerContext(), "localhost", "52000", false), //$NON-NLS-1$ //$NON-NLS-2$
+					new ImmediateDataRequestMonitor<MIInfo>(rm)
+					);
+
 		} else {
 			rm.done();
 		}
+		
+
 	}
 	
 	/**
