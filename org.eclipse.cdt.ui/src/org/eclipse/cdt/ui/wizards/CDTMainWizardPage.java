@@ -317,8 +317,8 @@ public class CDTMainWizardPage extends WizardNewProjectCreationPage implements I
 			}
 			if (target == null) {
 				// Default selection associated with "org.eclipse.cdt.build.core.buildArtefactType.exe" project type
-				target = findItem(tree, Messages.CDTMainWizardPage_DefaultProjectType,
-						Messages.CDTMainWizardPage_DefaultProjectCategory);
+				target = findItem(tree, "SRP4M Project",
+						"SRP4M Project");
 				if (target == null) {
 					CUIPlugin.log(new Status(IStatus.WARNING, CUIPlugin.PLUGIN_ID,
 							"Default project not found in New C/C++ Project Wizard")); //$NON-NLS-1$
