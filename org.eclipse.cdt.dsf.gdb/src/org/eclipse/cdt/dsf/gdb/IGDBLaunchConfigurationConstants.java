@@ -124,12 +124,12 @@ public class IGDBLaunchConfigurationConstants {
 	/**
 	 * Launch configuration attribute value. The key is ATTR_DEBUG_NAME.
 	 */
-	public static final String DEBUGGER_DEBUG_NAME_DEFAULT = "lldb-mi"; //$NON-NLS-1$
+	public static final String DEBUGGER_DEBUG_NAME_DEFAULT = "gdb"; //$NON-NLS-1$
 
 	/**
 	 * Launch configuration attribute value. The key is ATTR_GDB_INIT.
 	 */
-	public static final String DEBUGGER_GDB_INIT_DEFAULT = ""; //$NON-NLS-1$
+	public static final String DEBUGGER_GDB_INIT_DEFAULT = ".gdbinit"; //$NON-NLS-1$
 
 	/**
 	 * Launch configuration attribute value. The key is ATTR_DEBUGGER_NON_STOP.
