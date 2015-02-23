@@ -1007,12 +1007,12 @@ public class SemanticHighlightings {
 
 		@Override
 		public RGB getDefaultDefaultTextColor() {
-			return new RGB(255, 100, 0);
+			return RGB_BLACK;
 		}
 
 		@Override
 		public boolean isBoldByDefault() {
-			return true;
+			return false;
 		}
 
 		@Override
@@ -1022,7 +1022,7 @@ public class SemanticHighlightings {
 
 		@Override
 		public boolean isEnabledByDefault() {
-			return true;
+			return false;
 		}
 
 		@Override
@@ -1054,12 +1054,12 @@ public class SemanticHighlightings {
 
 		@Override
 		public RGB getDefaultDefaultTextColor() {
-			return new RGB(255, 100, 0);
+			return RGB_BLACK;
 		}
 
 		@Override
 		public boolean isBoldByDefault() {
-			return true;
+			return false;
 		}
 
 		@Override
@@ -1069,7 +1069,7 @@ public class SemanticHighlightings {
 
 		@Override
 		public boolean isEnabledByDefault() {
-			return true;
+			return false;
 		}
 
 		@Override

@@ -833,7 +833,7 @@
             id="org.eclipse.cdt.ui.macroSubstitutionHighlighting"
             isEditable="false"
             label="%Dummy.label"
-            value="218, 136, 23">
+            value="0, 0, 0">
       </colorDefinition>
       <colorDefinition
             id="org.eclipse.cdt.ui.macroDefinitionHighlighting"

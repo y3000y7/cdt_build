@@ -627,7 +627,7 @@ public class CommandFactory {
 	}
 
 	/**  @since 4.0 */
-	public ICommand<MIInfo> createMIFileExecAndSymbols(IMIContainerDMContext dmc, String file) {		
+	public ICommand<MIInfo> createMIFileExecAndSymbols(IMIContainerDMContext dmc, String file) {
 		return new MIFileExecAndSymbols(dmc, file);
 	}
 

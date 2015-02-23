@@ -17,7 +17,7 @@ import org.eclipse.cdt.dsf.mi.service.IMIContainerDMContext;
 import org.eclipse.cdt.dsf.mi.service.command.output.MIInfo;
 
 /**
- * -target-select [FILE]
+ * -file-exec-and-symbols [FILE]
  * 
  * Specify the executable file to be debugged. This file is the one from which
  * the symbol table is also read. If no file is specified, the command clears
@@ -54,10 +54,6 @@ public class MIFileExecAndSymbols extends MICommand<MIInfo>
 
     /** @since 4.0 */
     public MIFileExecAndSymbols(IMIContainerDMContext dmc, String file) {
-    	
-    	// Add connection to Simulator
-    	//MITargetSelect tmp = new MITargetSelect();
-    	
         super(dmc, "-file-exec-and-symbols", null, file == null ? null : new String[] {file}); //$NON-NLS-1$
     }
 }
